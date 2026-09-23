@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172635">
+  <title>Nhắc Đúng Việc — từ thông báo đến việc cần làm</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Nhắc Đúng Việc, trang chủ"><span class="brand-mark">✓</span><span>Nhắc <em>Đúng</em> Việc</span></a>
+    <span class="top-note"><span class="dot"></span> Bản thử nghiệm · Dữ liệu xử lý trên máy này</span>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">MỘT BỨC ẢNH. MỌI VIỆC RÕ RÀNG.</div>
+      <h1>Thông báo thì nhiều.<br><span>Việc cần nhớ thì gọn.</span></h1>
+      <p>Chụp thông báo trong nhóm lớp. Xem nguồn của từng thông tin, xác nhận chỗ mâu thuẫn, rồi mang checklist và lịch nhắc đi cùng.</p>
+      <div class="hero-actions">
+        <label class="button primary" for="imageInput"><span>↥</span> Tải ảnh thông báo</label>
+        <button type="button" class="button secondary" id="sampleButton">Xem tình huống mẫu <span aria-hidden="true">↗</span></button>
+        <input type="file" id="imageInput" accept="image/png,image/jpeg,image/webp" hidden>
+      </div>
+    </section>
+    <section class="workspace" aria-label="Không gian xử lý thông báo">
+      <div class="section-heading"><span class="step">01</span><div><h2>Ảnh và câu nguồn</h2><p>Chạm vào “Xem nguồn” bên phải để đối chiếu với ảnh.</p></div></div>
+      <div class="columns">
+        <div class="left-panel">
+          <div class="image-frame" id="imageFrame">
+            <div class="empty-illustration" id="emptyIllustration"><span>☰</span><strong>Ảnh nhóm lớp sẽ hiện ở đây</strong><small>PNG, JPG hoặc WebP · tối đa 8 MB</small></div>
+            <img id="preview" alt="Ảnh thông báo đã chọn" hidden>
+            <div id="imageHighlight" class="image-highlight" hidden></div>
+          </div>
+          <div class="transcript-head"><div><span class="mini-label">VĂN BẢN TỪ ẢNH</span><p>Có thể sửa nếu OCR đọc sai rồi phân tích lại.</p></div><button type="button" class="text-button" id="reanalyze" disabled>Phân tích lại ↗</button></div>
+          <textarea id="transcript" rows="7" spellcheck="false" placeholder="Văn bản nhận dạng sẽ xuất hiện ở đây…" aria-label="Văn bản nhận dạng từ ảnh" disabled></textarea>
+        </div>
+        <div class="right-panel">
+          <div id="status" class="status"><span class="status-icon">✦</span><span>Thử tình huống mẫu hoặc tải ảnh để bắt đầu.</span></div>
+          <div id="results" class="results" aria-live="polite">
+            <div class="idle-card"><span class="idle-num">01 / 02 / 03</span><strong>Từ ảnh đến hành động</strong><p>Đọc thông báo → kiểm tra điều chưa rõ → nhắc đúng việc.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer><span>Nhắc Đúng Việc · Proof of concept</span><span>Giờ chưa thống nhất? Hãy hỏi lại giáo viên trước khi xác nhận.</span></footer>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
