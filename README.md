@@ -19,7 +19,7 @@ $env:TESSERACT_CMD = 'C:\Program Files\Tesseract-OCR\tesseract.exe'
 npm start
 ```
 
-For the contest video, see [`demo/recording-guide.md`](demo/recording-guide.md). The user-facing interface is Vietnamese; [`demo/english-captions.srt`](demo/english-captions.srt) supplies an English translation for the illustrated journey and should be adjusted to match the actual recording.
+For the contest video, see [`demo/recording-guide.md`](demo/recording-guide.md). The user-facing interface and sample image are Vietnamese. [`demo/sample-translation.en.md`](demo/sample-translation.en.md) translates every line in the sample, while [`demo/english-captions.srt`](demo/english-captions.srt) supplies English narration captions for the illustrated journey and should be adjusted to match the actual recording.
 
 ## How it works
 
