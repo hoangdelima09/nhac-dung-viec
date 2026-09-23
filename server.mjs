@@ -33,7 +33,7 @@ function typeOfImage(buf) {
 
 function recognize(file) {
   return new Promise((resolve, reject) => {
-    const proc = spawn('tesseract',[file,'stdout','-l','vie+eng','--tessdata-dir',path.join(root,'tessdata'),'-c','tessedit_create_tsv=1','-c','tessedit_create_txt=0'],{stdio:['ignore','pipe','pipe']});
+    const proc = spawn(process.env.TESSERACT_CMD || 'tesseract',[file,'stdout','-l','vie+eng','--tessdata-dir',path.join(root,'tessdata'),'-c','tessedit_create_tsv=1','-c','tessedit_create_txt=0'],{stdio:['ignore','pipe','pipe']});
     let output = '', error = '', settled = false;
     const timer = setTimeout(() => proc.kill('SIGKILL'), 45000);
     proc.stdout.setEncoding('utf8'); proc.stderr.setEncoding('utf8');

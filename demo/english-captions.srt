@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:08,000
+Nhắc Đúng Việc turns a screenshot from a class chat into a checklist and reminders for parents.
+
+2
+00:00:08,000 --> 00:00:20,000
+This fictional sample contains two messages about the same parent meeting. The app reads the image locally with OCR.
+
+3
+00:00:20,000 --> 00:00:33,000
+One message says 8:00 on September 28; another says 9:00. Both original lines remain visible as evidence.
+
+4
+00:00:33,000 --> 00:00:45,000
+The app flags the conflict and will not export a calendar event until a parent verifies and chooses an hour.
+
+5
+00:00:45,000 --> 00:00:55,000
+For this demonstration, I select 9:00. In real life, the parent should check with the teacher first.
+
+6
+00:00:55,000 --> 00:01:08,000
+The pen and notebook become a checklist item. The information-form deadline also keeps a link to its source line.
+
+7
+00:01:08,000 --> 00:01:22,000
+The downloaded calendar file contains the confirmed meeting hour and the submission deadline, each with an alert.
+
+8
+00:01:22,000 --> 00:01:30,000
+The parent remains in control of uncertain details. The app does not choose between conflicting messages.

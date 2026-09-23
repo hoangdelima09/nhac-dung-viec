@@ -12,6 +12,15 @@ npm start
 
 Open **http://localhost:4173**. Click **Xem tình huống mẫu** to OCR the fictional sample image, choose the confirmed meeting hour, check off a preparation, and download `nhac-dung-viec.ics`. You can also upload a PNG, JPEG or WebP (up to 8 MB). `npm test` verifies the parser, calendar, and the sample image through the OCR endpoint.
 
+On Windows, download Tesseract from the installer linked by [Tesseract's installation guide](https://tesseract-ocr.github.io/tessdoc/Installation.html). If `tesseract` is not on your `PATH`, set `TESSERACT_CMD` in PowerShell before starting the app:
+
+```powershell
+$env:TESSERACT_CMD = 'C:\Program Files\Tesseract-OCR\tesseract.exe'
+npm start
+```
+
+For the contest video, see [`demo/recording-guide.md`](demo/recording-guide.md). The user-facing interface is Vietnamese; [`demo/english-captions.srt`](demo/english-captions.srt) supplies an English translation for the illustrated journey and should be adjusted to match the actual recording.
+
 ## How it works
 
 - `server.mjs`: a loopback-only server accepts one image, runs Tesseract in a temporary directory, returns OCR lines and their coordinates, then deletes the upload.
